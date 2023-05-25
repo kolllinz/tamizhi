@@ -1,10 +1,10 @@
-![[kelly-sikkema-wbs4KV6cD6U-unsplash.jpg]]
+![Sembarutthi](Resources/kelly-sikkema-wbs4KV6cD6U-unsplash.jpg)
 <div style='text-align: right;'>Photo by <a href="https://unsplash.com/@kellysikkema?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Kelly Sikkema</a> on <a href="https://unsplash.com/photos/-8ijVEhjkS8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></div>
 
 
 # Project Tamizhi
 
-![[keymap_kural01.png]]
+![Thirukkural](Resources/keymap_kural01.png)
 
 The aim of this project is to create a wholesome tamil environment in linux framebuffer console. Anyone can contribute to this project. This repository contains fonts, keymaps, shell-scripts, etc., which can be used in linux tty consoles to view tamil texts. 
 
@@ -30,21 +30,21 @@ Remember to do the above command in seperate tty so that you can toggle between 
 
 #### Usage
 
-![[Keyboard_Tamil.png]]
+![Basic Layout](Resources/Keyboard_Tamil.png)
 
 Tamizhi Keyboard layout uses mod keys to input tamil letters. There are 6 mod keys in Tamizhi layout from M1 to M6. Tamil Vowels (Naedil letters need Shift to enter) and Consonants can be typed without Mod keys. 
 
 ##### Vowels 
-![[Keyboard_Tamil(18).png]]
+![Vowels](Resources/Keyboard_Tamil(18).png)
 
 ##### Vowels (ShiftR Pressed)
-![[Keyboard_Tamil(19).png]]
+![Vowels Shifted](Resources/Keyboard_Tamil(19).png)
 
 ##### Numerals
-![[Keyboard_Tamil(20).png]]
+![Numerals](Resources/Keyboard_Tamil(20).png)
 
 ##### Numerals (ShiftL Pressed)
-![[Keyboard_Tamil(21).png]]
+![Numerals Shifted](Resources/Keyboard_Tamil(21).png)
 
 Combined Letters require Mod key to be pressed before pressing the consonant. Mod keys and their combinations are called Modes. Following are the Modes used to input tamizhi:
 
@@ -66,45 +66,45 @@ Combined Letters require Mod key to be pressed before pressing the consonant. Mo
 Lets see each mode one by one
 
 ##### Normal State
-![[Keyboard_Tamil(2).png]]
+![Mode Normal](Resources/Keyboard_Tamil(2).png)
 
 Above layout shows the behaviour of keys when Mod keys are not pressed.
 
 ##### Mode 1
-![[Keyboard_Tamil(3).png]]
+![Mode 1](Resources/Keyboard_Tamil(3).png)
 
 ##### Mode 2
-![[Keyboard_Tamil(4).png]]
+![Mode 2](Resources/Keyboard_Tamil(4).png)
 
 ##### Mode 3
-![[Keyboard_Tamil(5).png]]
+![Mode 3](Resources/Keyboard_Tamil(5).png)
 
 ##### Mode 4
-![[Keyboard_Tamil(6).png]]
+![Mode 4](Resources/Keyboard_Tamil(6).png)
 
 ##### Mode 5
-![[Keyboard_Tamil(7).png]]
+![Mode 5](Resources/Keyboard_Tamil(7).png)
 
 ##### Mode 6
-![[Keyboard_Tamil(8).png]]
+![Mode 6](Resources/Keyboard_Tamil(8).png)
 
 ##### Mode 7
-![[Keyboard_Tamil(9).png]]
+![Mode 7](Resources/Keyboard_Tamil(9).png)
 
 ##### Mode 8
-![[Keyboard_Tamil(10).png]]
+![Mode 8](Resources/Keyboard_Tamil(10).png)
 
 ##### Mode 9
-![[Keyboard_Tamil(11).png]]
+![Mode 9](Resources/Keyboard_Tamil(11).png)
 
 #### Mode 10
-![[Keyboard_Tamil(12).png]]
+![Mode 10](Resources/Keyboard_Tamil(12).png)
 
 ##### Mode 11
-![[Keyboard_Tamil(13).png]]
+![Mode 11](Resources/Keyboard_Tamil(13).png)
 
 ##### Mode 12
-![[Keyboard_Tamil(14).png]]
+![Mode 12](Resources/Keyboard_Tamil(14).png)
 
 
 ## Tamizhi font 
@@ -117,12 +117,12 @@ These limitations are just the tip of the iceberg. Like i said earlier, most of 
 
 Another difficulty one might face in creating mono font for tamil is the lack of unicode points for Tamil. Tamil Unicode Block only contains glyph for vowels, consonants and tone markings. This wouldn't be much of a problem in web rendering, but in console, each glyph will be printed individually. Lets say if we want to print tamil letter "கி".  Websites would render க + ி as கி, consoles on the other hand show them as `க ி`. Some even have vowel markings present both left and right side of a glyph (eg. போ, கௌ).
 
-![[tamil_text01.png]]
+![Not perfectly sandwiched tamil texts in console](Resources/tamil_text01.png)
 
 
 So, in order to overcome this, we can use other glyphs exists in unicode to use as a substitute for combined characters. Tamil Language has 12 vowels and 18 consonants. These when combine together produce 216 characters. we have unicode for 12 vowels and 18 consonants already, for the remaining 216 characters, i picked Braille unicode block as it contains 256 characters to choose from and it is not commonly used. I encoded tamil glyph in braille unicode in a bitmap file, then converted it into psfu font.
 
-![[keymap02.png]]
+![tamizhi glyph](Resources/keymap02.png)
 
 With this we now have 12+18 tamil characters and 216 tamil letter combinations (lets call it tamizhi characters). Adding Capital and Small English Alphabets and some essential characters, we would approximately have 400 glyphs which is less that the fixed limit (i.e., 512). 
 
