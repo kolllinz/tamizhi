@@ -15,7 +15,7 @@ The tamizhi keyboard layout is designed to facilitate input of tamil letters in 
 Inside the keymap directory, several directories would be present for architecture specific keymaps. In this guide, I use **i386**, but you could choose one based on your system architecture. Then we will create a seperate directory named **tamizhi** and place the keymap file inside that directory. 
 
 ```shell
-cd Shell_Scripts
+cd Fonts
 sudo mkdir /usr/share/keymaps/i386/tamizhi
 sudo mv tamizhi.map.gz /usr/share/keymaps/i386/tamizhi/
 ```
