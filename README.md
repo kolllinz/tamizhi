@@ -106,6 +106,8 @@ Above layout shows the behaviour of keys when Mod keys are not pressed.
 ##### Mode 12
 ![Mode 12](Resources/Keyboard_Tamil(14).png)
 
+If you are not able to input any tamizhi glyph using above modes, try using M1+M2+M3 instead.
+
 
 ## Tamizhi font 
 
