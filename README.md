@@ -118,10 +118,11 @@ Apart from this, it has several other limitations. A Linux Framebuffer only able
 These limitations are just the tip of the iceberg. Like i said earlier, most of the asian languages have variable widths. Because of their complexity, printing chinese in framebuffer would be extremely difficult. But Tamil on the other hand, have simple character structure. Not as simple as english, but it is indeed simple compared to other asian language.
 
 Another difficulty one might face in creating mono font for tamil is the lack of unicode points for Tamil. Tamil Unicode Block only contains glyph for vowels, consonants and tone markings. This wouldn't be much of a problem in web rendering, but in console, each glyph will be printed individually. Lets say if we want to print tamil letter "கி".  Websites would render க + ி as கி, consoles on the other hand show them as `க ி`. Some even have vowel markings present both left and right side of a glyph (eg. போ, கௌ).
-
-Below image shows this problem.
-![Not perfectly sandwiched tamil texts in console](Resources/tamil_text01.png)
  
+ 
+![Not perfectly sandwiched tamil texts in console](Resources/tamil_text01.png)
+
+You can clearly see that the above image have this type of problem. The image was taken when using Shruthi_8x16 font which lacks glyphs for tamizhi letters. I created it before tamizhi_8x16. It is kept inside the **Fonts/** folder. 
 
 So, in order to overcome this, we can use other glyphs exists in unicode to use as a substitute for combined characters. Tamil Language has 12 vowels and 18 consonants. These when combine together produce 216 characters. we have unicode for 12 vowels and 18 consonants already, for the remaining 216 characters, i picked Braille unicode block as it contains 256 characters to choose from and it is not commonly used. I encoded tamil glyph in braille unicode in a bitmap file, then converted it into psfu font.
 
